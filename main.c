@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 10:34:21 by gkrusta           #+#    #+#             */
-/*   Updated: 2023/05/03 16:01:58 by gkrusta          ###   ########.fr       */
+/*   Updated: 2023/05/03 16:18:52 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 #include <stdio.h>
 int	main(void)
 {
+/* 	char	c = 'a';
+	char	*ptr = &c; */
 /* 	char	str[] = "hola123"; */
-	printf("%p", 123);
+	printf("%x", -65);
 /* 	ft_decimal(1234); */
 	return (0);
 }

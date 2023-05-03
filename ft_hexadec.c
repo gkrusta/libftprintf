@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_us_decimal.c                                    :+:      :+:    :+:   */
+/*   ft_hexadec.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 15:51:47 by gkrusta           #+#    #+#             */
-/*   Updated: 2023/05/03 16:21:29 by gkrusta          ###   ########.fr       */
+/*   Created: 2023/05/03 16:15:44 by gkrusta           #+#    #+#             */
+/*   Updated: 2023/05/03 16:25:03 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
-
-int	main(long int n)
+int	ft_hexadec(int n)
 {
 	int	i;
 
 	i = 1;
 	if (n < 0)
 		return (-1);
-	if (n < 10)
+	if 
+	if (n < 16)
 	{
-		ft_putchar(n + '0');
+		ft_hexadec(n + '0');
 		i++;
 	}
 	else
 	{
-		ft_decimal(n / 10);
+		ft_hexadec(n / 16);
 		i += ft_putchar(n % 10 + '0');
 	}
 	return (i);
