@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_us_decimal.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 10:34:21 by gkrusta           #+#    #+#             */
-/*   Updated: 2023/05/03 16:01:58 by gkrusta          ###   ########.fr       */
+/*   Created: 2023/05/03 15:51:47 by gkrusta           #+#    #+#             */
+/*   Updated: 2023/05/03 15:57:52 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
-#include <stdio.h>
-int	main(void)
+
+int	main(long int n)
 {
-/* 	char	str[] = "hola123"; */
-	printf("%p", 123);
-/* 	ft_decimal(1234); */
-	return (0);
+	int	i;
+
+	i = 1;
+	if (n < 0)
+		return (-1);
+	if (n < 10)
+	{
+		ft_putchar(n + '0');
+		i++;
+	}
+	else
+	{
+		ft_decimal(n / 10);
+		i += ft_putchar(n % 10 + '0');
+	}	
+	return (i);
 }
