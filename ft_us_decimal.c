@@ -6,19 +6,17 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:51:47 by gkrusta           #+#    #+#             */
-/*   Updated: 2023/05/03 16:21:29 by gkrusta          ###   ########.fr       */
+/*   Updated: 2023/05/04 15:04:12 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	main(long int n)
+int	main(unsigned long n)
 {
 	int	i;
 
-	i = 1;
-	if (n < 0)
-		return (-1);
+	i = 0;
 	if (n < 10)
 	{
 		ft_putchar(n + '0');

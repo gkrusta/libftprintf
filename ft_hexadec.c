@@ -6,13 +6,13 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 16:15:44 by gkrusta           #+#    #+#             */
-/*   Updated: 2023/05/04 13:23:26 by gkrusta          ###   ########.fr       */
+/*   Updated: 2023/05/04 15:06:45 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	ft_hexadec(unsigned long  n, char c)
+int	ft_hexadec(unsigned long n, char c)
 {
 	int	i;
 

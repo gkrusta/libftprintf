@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 10:34:21 by gkrusta           #+#    #+#             */
-/*   Updated: 2023/05/04 13:23:26 by gkrusta          ###   ########.fr       */
+/*   Updated: 2023/05/04 15:01:28 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	main(void)
 /* 	printf("%p", (void *)ptr); */
 /* 	ft_decimal(1234); */
 /* 	ft_hexadec(0, 'x'); */
-	ft_void_ptr();
+/* 	ft_void_ptr(1234); */
+	printf ("%u", -1234);
 	return (0);
 }
