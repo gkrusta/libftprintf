@@ -6,13 +6,13 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:51:47 by gkrusta           #+#    #+#             */
-/*   Updated: 2023/05/04 15:04:12 by gkrusta          ###   ########.fr       */
+/*   Updated: 2023/05/04 15:38:25 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	main(unsigned long n)
+int	ft_us_decimal(unsigned long n)
 {
 	int	i;
 

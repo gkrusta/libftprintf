@@ -6,7 +6,7 @@
 #    By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/02 16:20:12 by gkrusta           #+#    #+#              #
-#    Updated: 2023/05/04 13:21:18 by gkrusta          ###   ########.fr        #
+#    Updated: 2023/05/04 16:42:01 by gkrusta          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ NAME = libfprintf.a
 LIB = ar rcs
 
 SRCS = ft_putchar.c ft_putstr.c ft_decimal.c \
-	   ft_hexadec.c ft_void_ptr.c 
+	   ft_us_decimal.c ft_hexadec.c ft_void_ptr.c \
+	   ft_printf.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -31,15 +32,14 @@ $(NAME): $(OBJS)
 	$(LIB) $(NAME) $(OBJS)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJS) $(OBJS_BONUS)
+	$(RM) $(OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
-
 
 .PHONY: all clean fclean re
