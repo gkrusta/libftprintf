@@ -6,13 +6,13 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 16:14:44 by gkrusta           #+#    #+#             */
-/*   Updated: 2023/05/03 14:26:33 by gkrusta          ###   ########.fr       */
+/*   Updated: 2023/05/04 18:20:00 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	ft_putchar(char c)
+int	ft_putchar(char c )
 {
 	write (1, &c, 1);
 	return (1);
