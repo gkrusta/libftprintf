@@ -6,7 +6,7 @@
 #    By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/02 16:20:12 by gkrusta           #+#    #+#              #
-#    Updated: 2023/05/03 15:27:24 by gkrusta          ###   ########.fr        #
+#    Updated: 2023/05/04 13:21:18 by gkrusta          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME = libfprintf.a
 
 LIB = ar rcs
 
-SRCS = ft_putchar.c ft_putstr.c ft_decimal.c
+SRCS = ft_putchar.c ft_putstr.c ft_decimal.c \
+	   ft_hexadec.c ft_void_ptr.c 
 
 OBJS = $(SRCS:.c=.o)
 
