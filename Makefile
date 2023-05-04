@@ -6,11 +6,11 @@
 #    By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/02 16:20:12 by gkrusta           #+#    #+#              #
-#    Updated: 2023/05/04 16:42:01 by gkrusta          ###   ########.fr        #
+#    Updated: 2023/05/04 18:12:39 by gkrusta          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libfprintf.a
+NAME = libftprintf.a
 
 LIB = ar rcs
 

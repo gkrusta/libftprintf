@@ -6,30 +6,32 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 13:27:48 by gkrusta           #+#    #+#             */
-/*   Updated: 2023/05/04 16:14:14 by gkrusta          ###   ########.fr       */
+/*   Updated: 2023/05/04 18:16:40 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	ft_compare(va_list args, const char c, int count)
+int	ft_compare(va_list args, const char c)
 {
+	int	sol;
 
+	sol = 0;
 	if (c == 'c')
-		count += ft_putchar(va_arg(args, int));
+		sol += ft_putchar(va_arg(args, int));
 	else if (c == 's')
-		count += ft_putstr(va_arg(args, char *));
+		sol += ft_putstr(va_arg(args, char *));
 	else if (c == 'p')
-		count += ft_void_ptr(va_arg(args, unsigned long));
+		sol += ft_void_ptr(va_arg(args, unsigned long));
 	else if (c == 'd' || c == 'i')
-		count += ft_decimal(va_arg(args, int));
+		sol += ft_decimal(va_arg(args, int));
 	else if (c == 'u')
-		count += ft_us_decimal(va_arg(args, unsigned long));
+		sol += ft_us_decimal(va_arg(args, unsigned long));
 	else if (c == 'x' || c == 'X')
-		count += ft_hexadec(va_arg(args, unsigned long), c);
+		sol += ft_hexadec(va_arg(args, unsigned long), c);
 	else if (c == '%')
-		count += ft_putchar('%');
-	return (count);
+		sol += ft_putchar('%');
+	return (sol);
 }
 
 int	ft_printf(char const *str, ...)
@@ -45,7 +47,7 @@ int	ft_printf(char const *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			count += ft_compare(args, str[i + 1], count);
+			count += ft_compare(args, str[i + 1]);
 			i++;
 		}
 		else
