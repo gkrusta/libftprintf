@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:51:21 by gkrusta           #+#    #+#             */
-/*   Updated: 2023/05/04 16:11:37 by gkrusta          ###   ########.fr       */
+/*   Updated: 2023/05/05 10:26:42 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ int	ft_decimal(int n)
 	else
 	{
 		ft_decimal(n / 10);
-		i += ft_putchar(n % 10 + '0');
+		i++;
+		ft_putchar(n % 10 + '0');
 	}	
 	return (i);
 }
