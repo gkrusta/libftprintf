@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 16:19:25 by gkrusta           #+#    #+#             */
-/*   Updated: 2023/05/05 13:53:53 by gkrusta          ###   ########.fr       */
+/*   Updated: 2023/05/05 16:06:28 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 /* libraries used */
 # include <unistd.h>
 # include <stdarg.h>
-# include <limits.h>
 
 /* functions used */
 int	ft_putchar(char c);
