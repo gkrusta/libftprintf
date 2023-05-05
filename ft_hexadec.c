@@ -6,30 +6,27 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 16:15:44 by gkrusta           #+#    #+#             */
-/*   Updated: 2023/05/04 15:06:45 by gkrusta          ###   ########.fr       */
+/*   Updated: 2023/05/05 13:53:39 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-int	ft_hexadec(unsigned long n, char c)
+int	ft_hexadec(unsigned long long n, char c)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	if (n < 0)
-		return (-1);
 	if (n < 16)
 	{
 		if (c == 'x')
-			ft_putchar("0123456789abcdef"[n % 16]);
+			i += ft_putchar("0123456789abcdef"[n % 16]);
 		else
-			ft_putchar("0123456789ABCDEF"[n % 16]);
-		i++;
+			i += ft_putchar("0123456789ABCDEF"[n % 16]);
 	}
 	else
 	{
-		ft_hexadec(n / 16, c);
+		i += ft_hexadec(n / 16, c);
 		if (c == 'x')
 			i += ft_putchar("0123456789abcdef"[n % 16]);
 		else

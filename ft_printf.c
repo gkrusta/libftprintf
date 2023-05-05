@@ -6,11 +6,11 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 13:27:48 by gkrusta           #+#    #+#             */
-/*   Updated: 2023/05/04 18:16:40 by gkrusta          ###   ########.fr       */
+/*   Updated: 2023/05/05 13:44:45 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_compare(va_list args, const char c)
 {
@@ -22,13 +22,13 @@ int	ft_compare(va_list args, const char c)
 	else if (c == 's')
 		sol += ft_putstr(va_arg(args, char *));
 	else if (c == 'p')
-		sol += ft_void_ptr(va_arg(args, unsigned long));
+		sol += ft_void_ptr(va_arg(args, unsigned long long));
 	else if (c == 'd' || c == 'i')
 		sol += ft_decimal(va_arg(args, int));
 	else if (c == 'u')
-		sol += ft_us_decimal(va_arg(args, unsigned long));
+		sol += ft_us_decimal(va_arg(args, unsigned int));
 	else if (c == 'x' || c == 'X')
-		sol += ft_hexadec(va_arg(args, unsigned long), c);
+		sol += ft_hexadec(va_arg(args, unsigned int), c);
 	else if (c == '%')
 		sol += ft_putchar('%');
 	return (sol);

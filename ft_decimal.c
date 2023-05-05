@@ -6,13 +6,13 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:51:21 by gkrusta           #+#    #+#             */
-/*   Updated: 2023/05/05 10:26:42 by gkrusta          ###   ########.fr       */
+/*   Updated: 2023/05/05 10:39:43 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-int	ft_decimal(int n)
+int	ft_decimal(long n)
 {
 	int	i;
 
@@ -30,8 +30,8 @@ int	ft_decimal(int n)
 	}
 	else
 	{
-		ft_decimal(n / 10);
 		i++;
+		i += ft_decimal(n / 10);
 		ft_putchar(n % 10 + '0');
 	}	
 	return (i);
